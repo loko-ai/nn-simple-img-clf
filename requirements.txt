@@ -1,0 +1,6 @@
+Flask
+Pillow
+flask
+keras
+pymongo
+tensorflow
