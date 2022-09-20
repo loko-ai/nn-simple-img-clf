@@ -1,0 +1,88 @@
+[
+  {
+    "name": "NN Simple IMG CLF",
+    "events": null,
+    "group": "Custom",
+    "description": "",
+    "inputs": [
+      {
+        "id": "input",
+        "label": "predict",
+        "service": "image/predict",
+        "to": "output"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "output",
+        "label": "predict"
+      }
+    ],
+    "configured": true,
+    "options": {
+      "group": "Custom",
+      "args": [
+      ],
+      "click": null,
+      "icon": "RiTyphoonFill",
+      "values": {
+      }
+    },
+    "disabled": false
+  },
+  {
+    "name": "Simple Mongo Extension",
+    "events": null,
+    "group": "Custom",
+    "description": "",
+    "inputs": [
+      {
+        "id": "insert_input",
+        "label": "insert",
+        "service": "insert",
+        "to": "insert_output"
+      },
+      {
+        "id": "search_input",
+        "label": "search",
+        "service": "search",
+        "to": "search_output"
+      },
+      {
+        "id": "delete_input",
+        "label": "delete",
+        "service": "delete",
+        "to": "delete_output"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "insert_output",
+        "label": "insert"
+      },
+      {
+        "id": "search_output",
+        "label": "search"
+      },
+      {
+        "id": "delete_output",
+        "label": "delete"
+      }
+    ],
+    "configured": true,
+    "options": {
+      "group": "Custom",
+      "args": [{
+                  "name": "collection",
+                  "type": "text",
+                  "label": "Collection Name",
+                  "helper": "the name of the collection target"
+                }],
+      "click": null,
+      "icon": "RiTyphoonFill",
+      "values": {
+      }
+    },
+    "disabled": false
+  }
+]

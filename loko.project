@@ -3,80 +3,10 @@
   "id": "nn_simple_img_clf",
   "description": "",
   "created_on": "25/08/2022, 07:19:40",
-  "last_modify": "26/08/2022, 19:32:41",
+  "last_modify": "20/09/2022, 14:31:56",
   "graphs": {
     "main": {
       "nodes": [
-        {
-          "id": "f7f4e5d5-e844-446e-9b0b-6243edc27865",
-          "position": {
-            "x": 830.8069571508918,
-            "y": 305.97622424801455
-          },
-          "type": "custom",
-          "dragHandle": "#nodeHandle",
-          "sourcePosition": "right",
-          "targetPosition": "left",
-          "width": 206,
-          "height": 56,
-          "selected": false,
-          "dragging": false,
-          "data": {
-            "name": "NN Simple IMG CLF",
-            "events": null,
-            "description": "",
-            "inputs": [
-              {
-                "id": "input",
-                "label": "predict",
-                "service": "image/predict",
-                "to": "output"
-              }
-            ],
-            "outputs": [
-              {
-                "id": "output",
-                "label": "predict"
-              }
-            ],
-            "configured": true,
-            "options": {
-              "group": "Custom",
-              "args": [
-                {
-                  "name": "comment",
-                  "type": "area",
-                  "label": "Node comment",
-                  "helper": "Use it to explain the usage of this node"
-                },
-                {
-                  "name": "alias",
-                  "type": "text",
-                  "label": "Name",
-                  "helper": "Use this name as an alias"
-                },
-                {
-                  "name": "debug",
-                  "type": "boolean",
-                  "label": "Debug to Console",
-                  "divider": true
-                }
-              ],
-              "click": null,
-              "icon": null,
-              "values": {
-                "debug": true
-              }
-            }
-          },
-          "selectable": true,
-          "draggable": true,
-          "positionAbsolute": {
-            "x": 830.8069571508918,
-            "y": 305.97622424801455
-          },
-          "__class__": "Node"
-        },
         {
           "id": "03aab9c9-6238-431f-a328-2dfefe469890",
           "position": {
@@ -160,12 +90,13 @@
                 "alias": "",
                 "debug": true,
                 "recursive": false,
-                "suffixes": "",
+                "suffixes": "png",
                 "propagate": true,
                 "value": {
                   "name": "data",
-                  "path": "data/data",
-                  "parent": "data",
+                  "path": "data",
+                  "parent": "/",
+                  "type": null,
                   "isDir": true,
                   "hidden": false
                 }
@@ -176,14 +107,80 @@
           "selectable": true,
           "draggable": true,
           "__class__": "Node"
+        },
+        {
+          "id": "7892a8f3-8c7d-465c-aa7e-a84daba30c62",
+          "position": {
+            "x": 948,
+            "y": 276
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "NN Simple IMG CLF",
+            "events": null,
+            "description": "",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "predict",
+                "service": "image/predict",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "predict"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": null,
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                }
+              ],
+              "click": null,
+              "icon": null,
+              "values": {
+                "debug": true
+              }
+            }
+          },
+          "selectable": true,
+          "draggable": true,
+          "__class__": "Node"
         }
       ],
       "edges": [
         {
-          "id": "reactflow__edge-03aab9c9-6238-431f-a328-2dfefe469890output-f7f4e5d5-e844-446e-9b0b-6243edc27865input",
+          "id": "reactflow__edge-03aab9c9-6238-431f-a328-2dfefe469890output-7892a8f3-8c7d-465c-aa7e-a84daba30c62input",
           "source": "03aab9c9-6238-431f-a328-2dfefe469890",
           "sourceHandle": "output",
-          "target": "f7f4e5d5-e844-446e-9b0b-6243edc27865",
+          "target": "7892a8f3-8c7d-465c-aa7e-a84daba30c62",
           "targetHandle": "input",
           "data": {
             "startColor": "#F8637A",
@@ -201,8 +198,8 @@
         {
           "id": "eb85869a-1eb1-4a59-a001-e2682dfc1e5b",
           "position": {
-            "x": 390,
-            "y": 86
+            "x": 524.2055305728336,
+            "y": -39.42572950732113
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -289,13 +286,17 @@
           },
           "selectable": true,
           "draggable": true,
+          "positionAbsolute": {
+            "x": 524.2055305728336,
+            "y": -39.42572950732113
+          },
           "__class__": "Node"
         },
         {
           "id": "ff318a86-de08-4db2-add3-980f196e39d5",
           "position": {
-            "x": 346,
-            "y": 227
+            "x": 399.01248630488163,
+            "y": 161.09152383303444
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -383,16 +384,16 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 346,
-            "y": 227
+            "x": 399.01248630488163,
+            "y": 161.09152383303444
           },
           "__class__": "Node"
         },
         {
           "id": "7f716121-4f1a-4569-84d9-fb29560975da",
           "position": {
-            "x": 340,
-            "y": 381
+            "x": 424.0352387699052,
+            "y": 389.77980106551246
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -480,16 +481,16 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 340,
-            "y": 381
+            "x": 424.0352387699052,
+            "y": 389.77980106551246
           },
           "__class__": "Node"
         },
         {
           "id": "6849d2ed-b68b-43a4-a08b-c6855ad1b7aa",
           "position": {
-            "x": 597,
-            "y": 218
+            "x": 792.664138031421,
+            "y": 238.06811672117135
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -580,8 +581,8 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 597,
-            "y": 218
+            "x": 792.664138031421,
+            "y": 238.06811672117135
           },
           "__class__": "Node"
         }
@@ -630,6 +631,11 @@
           "__class__": "Edge"
         }
       ],
+      "__class__": "Graph"
+    },
+    "Untitled 2": {
+      "nodes": [],
+      "edges": [],
       "__class__": "Graph"
     }
   },
